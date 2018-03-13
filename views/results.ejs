@@ -1,0 +1,24 @@
+<% include partials/header.ejs %>
+<div class="jumbotron">
+    <div>
+            <h1 class="text-center">Movie Results...</h1>
+    </div>
+        
+        <hr>
+        <ul id="moviename">
+                <% parsedData["Search"].forEach(function(movie){%>
+                    <img height="100px" width="70px"  src="<%=movie["Poster"]%>" alt="Img not available" >
+                    <li class="text-left">
+                        <strong>
+                            <a href="/movies"><%= movie["Title"] %> <%= console.log(movie["Title"])%></a>
+                        </strong> - <%= movie["Year"]%>                 
+                    </li>           
+                <% }); %>
+        </ul>
+</div>
+
+
+
+<a href="/">Search again</a>
+
+<% include partials/footer.ejs %>

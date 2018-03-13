@@ -1,0 +1,54 @@
+<% include partials/header %>
+<div class="jumbotron text-left">
+    <div class="container">
+            <img id="movieImg" src="<%=parsedData["Poster"]%>">    
+            <h1><%= parsedData["Title"]%></h1>       
+            <h4><%= parsedData["Year"] %></h4>
+            <h6><%= parsedData["Runtime"] %></h6>
+            <h5>IMdb rating-<%=parsedData["Ratings"][0]["Value"]%></h5>  
+            <h6>Genre: <%= parsedData["Genre"] %></h6>
+            
+    </div>
+</div>
+<hr>
+<div class="container">    
+    <h6 class="text-left">Writers: <%= parsedData["Writer"] %></h6> 
+    <h6 class="text-left">Actors: <%= parsedData["Actors"] %></h6>
+    <h6 class="text-left">Languages: <%= parsedData["Language"]%></h6> 
+    <h6 class="text-left">Awards: <%= parsedData["Awards"]%></h6>
+    <p><strong>Synopsis: </strong><%= parsedData["Plot"] %></p>
+</div>
+<hr>
+<div class="container">
+    <!-- <form>
+        <div class="form-group" >
+                <label>Url:</label>
+                <input type="text" class="form-control" placeholder="Enter Url">
+        </div>
+        <div class="checkbox">
+                <label>
+                     <input type="checkbox" > Free
+                     <input type="checkbox"> Paid
+                </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form> -->
+    <hr>
+    <div id="container">
+            <h1>Link List </h1>
+            <input type="text" placeholder="Add New Link">
+            <ul>
+            </ul>
+        </div>
+    <!-- <div class="container">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">Link 1</a>
+                    <a href="#" class="list-group-item">Link 2</a>
+                    <a href="#"  class="list-group-item list-group-item-success">Link 3</a>
+                    <a href="#" class="list-group-item ">Link 4</a>
+                </div>
+                
+    </div> -->
+
+</div>
+<% include partials/footer %>
